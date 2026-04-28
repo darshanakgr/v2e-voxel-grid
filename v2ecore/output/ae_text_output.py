@@ -87,7 +87,7 @@ class DVSTextOutput:
         if len(events) == 0:
             return
         n = events.shape[0]
-        t = (events[:, 0]).astype(np.float)
+        t = (events[:, 0]).astype(np.float64)
         x = events[:, 1].astype(np.int32) # Issue #37, thanks Mohsi Jawaid
         if self.flipx: x = (self.sizex - 1) - x  # 0 goes to sizex-1
         y = events[:, 2].astype(np.int32)
